@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>En Mantenimiento | Alan Manuel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background-color: var(--background-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            /* Añadimos un poco de padding para que el contenido no pegue a los bordes en móvil */
+            padding: 0 15px; 
+        }
+
+        .maintenance-container {
+            width: 100%; /* Hacemos que ocupe el ancho disponible */
+            max-width: 600px;
+            padding: 50px 40px;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .maintenance-icon {
+            font-size: 5rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            animation: spin 10s linear infinite;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: var(--text-color);
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ================================= */
+        /* AQUÍ EMPIEZA EL CÓDIGO RESPONSIVO */
+        /* ================================= */
+        @media (max-width: 768px) {
+            .maintenance-container {
+                /* Reducimos el padding en pantallas pequeñas */
+                padding: 40px 25px;
+            }
+
+            .maintenance-icon {
+                /* Hacemos el ícono más pequeño */
+                font-size: 4rem;
+            }
+
+            h1 {
+                /* Hacemos el título más pequeño */
+                font-size: 2rem;
+            }
+
+            p {
+                /* Hacemos el texto un poco más pequeño */
+                font-size: 1rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="maintenance-container">
+        <i class="fas fa-cogs maintenance-icon"></i>
+        <h1>Volveremos Pronto</h1>
+        <p>
+            Estoy realizando algunas mejoras importantes en esta demostración para ofrecerte una mejor experiencia. ¡Gracias por tu paciencia!
+        </p>
+        <a href="index.html" class="cta-button">Regresar al Portafolio Principal</a>
+    </div>
+
+</body>
+</html>
